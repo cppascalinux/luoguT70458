@@ -121,8 +121,13 @@ void dbg()
 }
 int main()
 {
-	freopen("cowdate.in","r",stdin);
-	freopen("cowdate.out","w",stdout);
+	for(int ttt=1;ttt<=10;ttt++)
+	{
+		char sin[20],sout[20];
+		sprintf(sin,"a%d.in",ttt);
+		sprintf(sout,"a%d.out",ttt);
+	freopen(sin,"r",stdin);
+	freopen(sout,"w",stdout);
 	rd(n);
 	pwl=tmp+50;
 	for(int i=-20;i<=20;i++)
@@ -133,6 +138,7 @@ int main()
 		p[i]=a/(db)1000000.0;
 	}
 	sa[0]=cp(1,0);
+	sb[0]=cp(0,0);
 	db tmp=1;
 	for(int i=1;i<=n;i++)
 	{
@@ -149,5 +155,6 @@ int main()
 	// dbg();
 	solve();
 	cerr<<clock();
+	}
 	return 0;
 }
